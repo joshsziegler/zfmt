@@ -5,7 +5,7 @@ Opinionated, no-frills formatter for Go, CSS, and Javascript written in Go.
 ## Install
 
 ```
-go get -u github.com/joshsziegler/zfmt
+go get -u github.com/joshsziegler/zfmt/cmd/zfmt
 ```
 
 ## Run
