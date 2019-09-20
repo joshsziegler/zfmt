@@ -82,6 +82,10 @@ func main() {
 		if fExtension != ".go" && fExtension != ".js" && fExtension != ".css" {
 			return nil
 		}
+		// Skip minified JS and CSS files
+		if strings.HasSuffix(".min.js") || strings.HasSuffix(".min.css") {
+			return nil
+		}
 		// Skip if this file hasn't been modified since the last format
 		if lastFormatTime.After(fInfo.ModTime()) {
 			return nil
