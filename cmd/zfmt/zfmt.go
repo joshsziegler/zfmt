@@ -83,7 +83,7 @@ func main() {
 			return nil
 		}
 		// Skip minified JS and CSS files
-		if strings.HasSuffix(".min.js") || strings.HasSuffix(".min.css") {
+		if strings.HasSuffix(fPath, ".min.js") || strings.HasSuffix(fPath, ".min.css") {
 			return nil
 		}
 		// Skip if this file hasn't been modified since the last format
